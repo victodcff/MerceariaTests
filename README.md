@@ -58,10 +58,7 @@ O **MerceariaMVC** é uma solução para cadastro e controle de **Clientes** e *
 ## 📸 Capturas de Tela
 
 ### 🏠 Painel Inicial (Home)
-
-<p align="center">
-  <img src="./imagens/home.png" alt="Página Inicial" width="100%">
-</p>
+![Página Inicial](MerceariaMVC/imagens/home.png)
 
 ---
 
@@ -69,4 +66,4 @@ O **MerceariaMVC** é uma solução para cadastro e controle de **Clientes** e *
 
 | Gestão de Clientes | Gestão de Produtos |
 | :---: | :---: |
-| <img src="./imagens/clientes.png" alt="Módulo de Clientes" width="100%"> | <img src="./imagens/produtos.png" alt="Módulo de Produtos" width="100%"> |
+| ![Módulo de Clientes](MerceariaMVC/imagens/clientes.png) | ![Módulo de Produtos](MerceariaMVC/imagens/produtos.png) |
