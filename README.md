@@ -86,6 +86,3 @@ Projetado com foco em usabilidade, o sistema conta com interface responsiva e mo
 | ![Módulo de Clientes](MerceariaMVC/imagens/clientes.png) | ![Módulo de Produtos](MerceariaMVC/imagens/produtos.png) |
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-db036000-a425-11eb-923d-791b32d239b0.gif" width="100%">
-('Arroz Agulhinha 5kg', 24.90, 50),
-('Feijão Carioca 1kg', 8.50, 80),
-('Café Torrado 500g', 16.90, 35);
