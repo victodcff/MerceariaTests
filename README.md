@@ -69,20 +69,3 @@ O **MerceariaMVC** é uma solução para cadastro e controle de **Clientes** e *
 | ![Módulo de Clientes](imagens/clientes.png) | ![Módulo de Produtos](imagens/produtos.png) |
 
 ---
-
-## 🗄️ Script do Banco de Dados
-
-Caso queira popular o banco diretamente com dados de teste:
-
-```sql
--- Inserir Clientes
-INSERT INTO Clientes (Nome, Email, Idade, Ativo) VALUES 
-('Ana Silva', 'ana.silva@email.com', 28, 1),
-('Carlos Eduardo', 'carlos.eduardo@email.com', 35, 1),
-('Mariana Oliveira', 'mariana.oliveira@email.com', 22, 1);
-
--- Inserir Produtos
-INSERT INTO Produtos (Nome, Preco, Estoque) VALUES 
-('Arroz Agulhinha 5kg', 24.90, 50),
-('Feijão Carioca 1kg', 8.50, 80),
-('Café Torrado 500g', 16.90, 35);
