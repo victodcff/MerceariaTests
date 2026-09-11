@@ -24,14 +24,16 @@
 
 </div>
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-db036000-a425-11eb-923d-791b32d239b0.gif" id="banner-wave" width="100%">
+<img src="https://user-images.githubusercontent.com/73097560/115834477-db036000-a425-11eb-923d-791b32d239b0.gif" width="100%">
 
 ## 📌 Sumário
 
 - [📖 Sobre o Projeto](#-sobre-o-projeto)
 - [👨‍🎓 Autoria e Orientação](#-autoria-e-orientação)
+- [🏗️ Estrutura da Arquitetura](#️-estrutura-da-arquitetura)
 - [✨ Funcionalidades](#-funcionalidades)
 - [📸 Capturas de Tela](#-capturas-de-tela)
+- [🧪 Testes Unitários](#-testes-unitários)
 - [🗄️ Script do Banco de Dados](#️-script-do-banco-de-dados)
 
 ---
@@ -40,7 +42,7 @@
 
 O **MerceariaMVC** é uma solução completa desenvolvida no padrão **MVC (Model-View-Controller)** para cadastro, manutenção e acompanhamento de **Clientes** e **Produtos**. 
 
-Projetado com foco em usabilidade, o sistema conta com interface responsiva e moderna (*Sass Clean / Green Olive*), validação de formulários no lado do servidor e persistência de dados relacional.
+Projetado com foco em usabilidade, o sistema conta com interface responsiva e moderna, validação de formulários no lado do servidor e persistência de dados relacional.
 
 ---
 
@@ -55,34 +57,18 @@ Projetado com foco em usabilidade, o sistema conta com interface responsiva e mo
 
 </div>
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-db036000-a425-11eb-923d-791b32d239b0.gif" width="100%">
-
-## ✨ Funcionalidades
-
-### 👥 Módulo de Clientes
-- 📝 **Cadastro Completo:** Registro de nome, e-mail e idade.
-- 🟢 **Gestão de Status:** Controle de clientes ativos/inativos.
-- 🛡️ **Regra de Negócio:** Método `PodeComprar()` que verifica a maioridade (18+ anos).
-- 🔄 **CRUD Completo:** Listagem, consulta, edição e exclusão de registros.
-
-### 📦 Módulo de Produtos
-- 🏷️ **Controle de Inventário:** Cadastro de nome, preço unitário e quantidade.
-- ⚡ **Validação de Domínio:** Bloqueio de inserções com preços ou estoque `<= 0`.
-- 📊 **Gestão Ágil:** Atualização direta de estoque e preços no banco.
-
 ---
 
-## 📸 Capturas de Tela
+## 🏗️ Estrutura da Arquitetura
 
-### 🏠 Painel Inicial (Home)
-![Página Inicial](MerceariaMVC/imagens/home.png)
+O projeto foi organizado separando responsabilidades no padrão MVC e incluindo testes automatizados:
 
----
-
-### 📍 Módulos do Sistema
-
-| 👥 Gestão de Clientes | 📦 Gestão de Produtos |
-| :---: | :---: |
-| ![Módulo de Clientes](MerceariaMVC/imagens/clientes.png) | ![Módulo de Produtos](MerceariaMVC/imagens/produtos.png) |
-
-<img src="https://user-images.githubusercontent.com/73097560/115834477-db036000-a425-11eb-923d-791b32d239b0.gif" width="100%">
+```text
+📂 MerceariaTests/
+ ├── 📂 MerceariaMVC/          # Aplicação Principal (ASP.NET Core)
+ │    ├── 📂 Controllers/       # Controladores de Clientes e Produtos
+ │    ├── 📂 Models/            # Entidades e Regras de Negócio
+ │    ├── 📂 Views/             # Interface de Usuário (Razor Pages)
+ │    ├── 📂 Data/              # Contexto do Entity Framework
+ │    └── 📂 imagens/           # Capturas de tela para documentação
+ └── 📂 MerceariaMVCTests/      # Projeto de Testes Unitários
