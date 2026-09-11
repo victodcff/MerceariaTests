@@ -1,25 +1,34 @@
-# 🛒 MerceariaMVC
+<div align="center">
 
-Uma aplicação web para gerenciamento de clientes e estoque de produtos para mercearias, desenvolvida no padrão de arquitetura **MVC (Model-View-Controller)** com **ASP.NET Core**.
+  <!-- Animação de Digitação / Título -->
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.herokuapp.com?font=Plus+Jakarta+Sans&weight=700&size=32&duration=3000&pause=1000&color=22C55E&center=true&vCenter=true&width=500&height=50&lines=🛒+MerceariaMVC;Gest%C3%A3o+Inteligente+e+Pr%C3%A1tica;ASP.NET+Core+MVC+%2B+EF+Core" alt="Typing SVG" />
+  </a>
 
----
+  <p align="center">
+    <b>Plataforma web intuitiva e completa para controle de clientes, estoque e regras de negócio.</b>
+  </p>
 
-## 🛠️ Tecnologias Utilizadas
+  <!-- Badges Tecnológicas -->
+  <p align="center">
+    <img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white" />
+    <img src="https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white" />
+    <img src="https://img.shields.io/badge/ASP.NET%20Core-512BD4?style=for-the-badge&logo=dotnet&logoColor=white" />
+    <img src="https://img.shields.io/badge/Entity%20Framework-512BD4?style=for-the-badge&logo=dotnet&logoColor=white" />
+    <br/>
+    <img src="https://img.shields.io/badge/SQL%20Server-CC292B?style=for-the-badge&logo=microsoftsqlserver&logoColor=white" />
+    <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
+    <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
+    <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" />
+  </p>
 
-![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
-![.NET](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
-![ASP.NET Core](https://img.shields.io/badge/ASP.NET%20Core-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
-![Entity Framework](https://img.shields.io/badge/Entity%20Framework-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
-![SQL Server](https://img.shields.io/badge/SQL%20Server-CC292B?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
+</div>
 
----
+<img src="https://user-images.githubusercontent.com/73097560/115834477-db036000-a425-11eb-923d-791b32d239b0.gif" id="banner-wave" width="100%">
 
 ## 📌 Sumário
 
-- [Sobre o Projeto](#-sobre-o-projeto)
+- [📖 Sobre o Projeto](#-sobre-o-projeto)
 - [👨‍🎓 Autoria e Orientação](#-autoria-e-orientação)
 - [✨ Funcionalidades](#-funcionalidades)
 - [📸 Capturas de Tela](#-capturas-de-tela)
@@ -29,29 +38,37 @@ Uma aplicação web para gerenciamento de clientes e estoque de produtos para me
 
 ## 📖 Sobre o Projeto
 
-O **MerceariaMVC** é uma solução para cadastro e controle de **Clientes** e **Produtos**. O sistema conta com uma interface moderna e intuitiva, permitindo cadastrar, listar, editar e remover registros (CRUD completo), além de validar regras de negócio diretamente no servidor.
+O **MerceariaMVC** é uma solução completa desenvolvida no padrão **MVC (Model-View-Controller)** para cadastro, manutenção e acompanhamento de **Clientes** e **Produtos**. 
+
+Projetado com foco em usabilidade, o sistema conta com interface responsiva e moderna (*Sass Clean / Green Olive*), validação de formulários no lado do servidor e persistência de dados relacional.
 
 ---
 
 ## 👨‍🎓 Autoria e Orientação
 
-- **Aluno / Desenvolvedor:** Rodrigo Victor Damazio Costa Filho
-- **Professor / Orientador:** Wallace Oliveira dos Santos
+<div align="center">
 
----
+| 👨‍💻 **Desenvolvedor / Aluno** | 👨‍🏫 **Professor / Orientador** |
+| :---: | :---: |
+| **Rodrigo Victor Damazio Costa Filho** | **Wallace Oliveira dos Santos** |
+| 🎓 *Estudante de Desenvolvimento* | 📚 *Orientação Acadêmica* |
+
+</div>
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-db036000-a425-11eb-923d-791b32d239b0.gif" width="100%">
 
 ## ✨ Funcionalidades
 
 ### 👥 Módulo de Clientes
-- Cadastro de novos clientes com validações (nome, e-mail e idade).
-- Controle de status (Ativo / Inativo).
-- Regra de negócio: verificação de maioridade (18+ anos) e permissão para compra.
-- Listagem, edição e exclusão de registros.
+- 📝 **Cadastro Completo:** Registro de nome, e-mail e idade.
+- 🟢 **Gestão de Status:** Controle de clientes ativos/inativos.
+- 🛡️ **Regra de Negócio:** Método `PodeComprar()` que verifica a maioridade (18+ anos).
+- 🔄 **CRUD Completo:** Listagem, consulta, edição e exclusão de registros.
 
 ### 📦 Módulo de Produtos
-- Cadastro de produtos informando nome, preço e quantidade em estoque.
-- Validação automática de regras de negócio (preço e estoque maiores que zero).
-- Edição, atualização de estoque e remoção de registros.
+- 🏷️ **Controle de Inventário:** Cadastro de nome, preço unitário e quantidade.
+- ⚡ **Validação de Domínio:** Bloqueio de inserções com preços ou estoque `<= 0`.
+- 📊 **Gestão Ágil:** Atualização direta de estoque e preços no banco.
 
 ---
 
@@ -64,6 +81,8 @@ O **MerceariaMVC** é uma solução para cadastro e controle de **Clientes** e *
 
 ### 📍 Módulos do Sistema
 
-| Gestão de Clientes | Gestão de Produtos |
+| 👥 Gestão de Clientes | 📦 Gestão de Produtos |
 | :---: | :---: |
 | ![Módulo de Clientes](MerceariaMVC/imagens/clientes.png) | ![Módulo de Produtos](MerceariaMVC/imagens/produtos.png) |
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-db036000-a425-11eb-923d-791b32d239b0.gif" width="100%">
