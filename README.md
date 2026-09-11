@@ -4,21 +4,32 @@ Uma aplicação web para gerenciamento de clientes e estoque de produtos para me
 
 ---
 
+## 🛠️ Tecnologias Utilizadas
+
+![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
+![.NET](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
+![ASP.NET Core](https://img.shields.io/badge/ASP.NET%20Core-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
+![Entity Framework](https://img.shields.io/badge/Entity%20Framework-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
+![SQL Server](https://img.shields.io/badge/SQL%20Server-CC292B?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
+
+---
+
 ## 📌 Sumário
 
 - [Sobre o Projeto](#-sobre-o-projeto)
 - [✨ Funcionalidades](#-funcionalidades)
-- [🛠️ Tecnologias Utilizadas](#️-tecnologias-utilizadas)
 - [📸 Capturas de Tela](#-capturas-de-tela)
 - [🚀 Como Executar o Projeto](#-como-executar-o-projeto)
 - [🗄️ Script do Banco de Dados](#️-script-do-banco-de-dados)
-- [✒️ Autor](#️-autor)
 
 ---
 
 ## 📖 Sobre o Projeto
 
-O **MerceariaMVC** é uma solução completa para cadastro e controle de **Clientes** e **Produtos**. O sistema conta com uma interface moderna e intuitiva no estilo *Clean/Minimalista*, permitindo cadastrar, listar, editar e remover registros (CRUD completo), além de validar regras de negócio no servidor.
+O **MerceariaMVC** é uma solução para cadastro e controle de **Clientes** e **Produtos**. O sistema conta com uma interface moderna e intuitiva, permitindo cadastrar, listar, editar e remover registros (CRUD completo), além de validar regras de negócio diretamente no servidor.
 
 ---
 
@@ -37,35 +48,18 @@ O **MerceariaMVC** é uma solução completa para cadastro e controle de **Clien
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
-
-### **Back-end**
-- **C#** (.NET)
-- **ASP.NET Core MVC**
-- **Entity Framework Core** (ORM)
-
-### **Front-end**
-- **HTML5** / **CSS3**
-- **Bootstrap 5** (Layout moderno e responsivo)
-- **Bootstrap Icons** (Ícones visuais)
-- **Razor Views** (`.cshtml`)
-
-### **Banco de Dados**
-- **SQL Server** / **LocalDB**
-
----
-
 ## 📸 Capturas de Tela
 
 ### 🏠 Painel Inicial (Home)
-![Página Inicial](imagens/home.png)
+<img src="./imagens/home.png" alt="Página Inicial" width="100%" />
 
 ---
 
 ### 📍 Módulos do Sistema
+
 | Gestão de Clientes | Gestão de Produtos |
 | :---: | :---: |
-| ![Módulo de Clientes](imagens/clientes.png) | ![Módulo de Produtos](imagens/produtos.png) |
+| <img src="./imagens/clientes.png" alt="Módulo de Clientes" width="100%" /> | <img src="./imagens/produtos.png" alt="Módulo de Produtos" width="100%" /> |
 
 ---
 
@@ -73,12 +67,14 @@ O **MerceariaMVC** é uma solução completa para cadastro e controle de **Clien
 
 ### 📋 Pré-requisitos
 - [.NET SDK](https://dotnet.microsoft.com/download)
-- [Visual Studio](https://visualstudio.microsoft.com/) ou [VS Code](https://code.visualstudio.com/)
-- [SQL Server](https://www.microsoft.com/sql-server/) ou LocalDB
+- Visual Studio 2022 ou VS Code
+- SQL Server ou LocalDB
 
 ### 🔧 Passo a Passo
 
-1. **Clonar o repositório:**
-   ```bash
-   git clone [https://github.com/SEU_USUARIO/MerceariaMVC.git](https://github.com/SEU_USUARIO/MerceariaMVC.git)
-   cd MerceariaMVC
+1. **Configurar a Connection String:**
+   Ajuste a string de conexão no arquivo `appsettings.json`:
+   ```json
+   "ConnectionStrings": {
+     "MerceariaContext": "Server=(localdb)\\mssqllocaldb;Database=MerceariaDb;Trusted_Connection=True;MultipleActiveResultSets=true"
+   }
