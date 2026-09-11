@@ -1,0 +1,60 @@
+﻿@model MerceariaMVC.Models.Cliente
+
+@{
+    ViewData["Title"] = "Editar Cliente";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-6 col-lg-5">
+        <div class="card border-0 shadow-sm rounded-4 p-4">
+            <div class="d-flex align-items-center mb-3">
+                <div class="icon-shape bg-primary bg-opacity-10 text-primary rounded-circle me-3">
+                    <i class="bi bi-pencil-square fs-4"></i>
+                </div>
+                <div>
+                    <h4 class="fw-bold mb-0">Editar Cliente</h4>
+                    <small class="text-muted">Atualize as informações</small>
+                </div>
+            </div>
+            <hr class="my-3" />
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+                <input type="hidden" asp-for="Id" />
+
+                <div class="mb-3">
+                    <label asp-for="Nome" class="form-label fw-semibold"></label>
+                    <input asp-for="Nome" class="form-control" />
+                    <span asp-validation-for="Nome" class="text-danger small"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Email" class="form-label fw-semibold"></label>
+                    <input asp-for="Email" type="email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger small"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Idade" class="form-label fw-semibold"></label>
+                    <input asp-for="Idade" type="number" class="form-control" />
+                    <span asp-validation-for="Idade" class="text-danger small"></span>
+                </div>
+
+                <div class="mb-3 form-check form-switch">
+                    <input class="form-check-input" type="checkbox" asp-for="Ativo" />
+                    <label class="form-check-label fw-semibold" asp-for="Ativo"></label>
+                </div>
+
+                <div class="d-flex gap-2 mt-4">
+                    <button type="submit" class="btn btn-primary rounded-pill flex-grow-1 fw-bold">Atualizar</button>
+                    <a asp-action="Index" class="btn btn-outline-secondary rounded-pill">Voltar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,33 @@
+﻿@model MerceariaMVC.Models.Produto
+
+@{
+    ViewData["Title"] = "Excluir Produto";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-6 col-lg-5">
+        <div class="card border-0 shadow-sm rounded-4 p-4 border-start border-danger border-4">
+            <h4 class="fw-bold text-danger mb-2"><i class="bi bi-exclamation-triangle-fill me-2"></i>Confirmar Exclusão</h4>
+            <p class="text-muted small">Tem certeza de que deseja remover este produto permanentemente?</p>
+            <hr />
+            <dl class="row mb-4">
+                <dt class="col-sm-4 text-muted fw-normal">@Html.DisplayNameFor(model => model.Nome)</dt>
+                <dd class="col-sm-8 fw-bold text-dark">@Html.DisplayFor(model => model.Nome)</dd>
+
+                <dt class="col-sm-4 text-muted fw-normal">@Html.DisplayNameFor(model => model.Preco)</dt>
+                <dd class="col-sm-8 text-success fw-bold">@Model.Preco.ToString("C")</dd>
+
+                <dt class="col-sm-4 text-muted fw-normal">@Html.DisplayNameFor(model => model.Estoque)</dt>
+                <dd class="col-sm-8">@Model.Estoque unidades</dd>
+            </dl>
+
+            <form asp-action="Delete">
+                <input type="hidden" asp-for="IdProduto" />
+                <div class="d-flex gap-2">
+                    <button type="submit" class="btn btn-danger rounded-pill flex-grow-1 fw-bold">Excluir</button>
+                    <a asp-action="Index" class="btn btn-outline-secondary rounded-pill">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
