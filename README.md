@@ -20,9 +20,9 @@ Uma aplicação web para gerenciamento de clientes e estoque de produtos para me
 ## 📌 Sumário
 
 - [Sobre o Projeto](#-sobre-o-projeto)
+- [👨‍🎓 Autoria e Orientação](#-autoria-e-orientação)
 - [✨ Funcionalidades](#-funcionalidades)
 - [📸 Capturas de Tela](#-capturas-de-tela)
-- [🚀 Como Executar o Projeto](#-como-executar-o-projeto)
 - [🗄️ Script do Banco de Dados](#️-script-do-banco-de-dados)
 
 ---
@@ -30,6 +30,13 @@ Uma aplicação web para gerenciamento de clientes e estoque de produtos para me
 ## 📖 Sobre o Projeto
 
 O **MerceariaMVC** é uma solução para cadastro e controle de **Clientes** e **Produtos**. O sistema conta com uma interface moderna e intuitiva, permitindo cadastrar, listar, editar e remover registros (CRUD completo), além de validar regras de negócio diretamente no servidor.
+
+---
+
+## 👨‍🎓 Autoria e Orientação
+
+- **Aluno / Desenvolvedor:** Rodrigo Victor Damazio Costa Filho
+- **Professor / Orientador:** Wallace Oliveira dos Santos
 
 ---
 
@@ -51,7 +58,7 @@ O **MerceariaMVC** é uma solução para cadastro e controle de **Clientes** e *
 ## 📸 Capturas de Tela
 
 ### 🏠 Painel Inicial (Home)
-<img src="./imagens/home.png" alt="Página Inicial" width="100%" />
+![Página Inicial](imagens/home.png)
 
 ---
 
@@ -59,22 +66,23 @@ O **MerceariaMVC** é uma solução para cadastro e controle de **Clientes** e *
 
 | Gestão de Clientes | Gestão de Produtos |
 | :---: | :---: |
-| <img src="./imagens/clientes.png" alt="Módulo de Clientes" width="100%" /> | <img src="./imagens/produtos.png" alt="Módulo de Produtos" width="100%" /> |
+| ![Módulo de Clientes](imagens/clientes.png) | ![Módulo de Produtos](imagens/produtos.png) |
 
 ---
 
-## 🚀 Como Executar o Projeto
+## 🗄️ Script do Banco de Dados
 
-### 📋 Pré-requisitos
-- [.NET SDK](https://dotnet.microsoft.com/download)
-- Visual Studio 2022 ou VS Code
-- SQL Server ou LocalDB
+Caso queira popular o banco diretamente com dados de teste:
 
-### 🔧 Passo a Passo
+```sql
+-- Inserir Clientes
+INSERT INTO Clientes (Nome, Email, Idade, Ativo) VALUES 
+('Ana Silva', 'ana.silva@email.com', 28, 1),
+('Carlos Eduardo', 'carlos.eduardo@email.com', 35, 1),
+('Mariana Oliveira', 'mariana.oliveira@email.com', 22, 1);
 
-1. **Configurar a Connection String:**
-   Ajuste a string de conexão no arquivo `appsettings.json`:
-   ```json
-   "ConnectionStrings": {
-     "MerceariaContext": "Server=(localdb)\\mssqllocaldb;Database=MerceariaDb;Trusted_Connection=True;MultipleActiveResultSets=true"
-   }
+-- Inserir Produtos
+INSERT INTO Produtos (Nome, Preco, Estoque) VALUES 
+('Arroz Agulhinha 5kg', 24.90, 50),
+('Feijão Carioca 1kg', 8.50, 80),
+('Café Torrado 500g', 16.90, 35);
